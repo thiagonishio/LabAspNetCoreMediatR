@@ -39,10 +39,7 @@ namespace Exemplo.Clientes.API
             services.AddControllers();
 
             services.AddMediatR(typeof(Startup));
-
             services.AddScoped<IMediatorHandler, MediatorHandler>();
-            services.AddScoped<IRequestHandler<RegistrarClienteCommand, ValidationResult>, ClienteCommandHandler>();
-            services.AddScoped<INotificationHandler<ClienteRegistradoEvent>, ClienteEventHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

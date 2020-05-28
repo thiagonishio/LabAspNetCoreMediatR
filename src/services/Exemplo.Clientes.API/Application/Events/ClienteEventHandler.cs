@@ -8,7 +8,7 @@ namespace Exemplo.Clientes.API.Application.Events
     {
         public Task Handle(ClienteRegistradoEvent notification, CancellationToken cancellationToken)
         {
-            // Enviar evento de confirmação
+            System.Diagnostics.Debug.WriteLine("Enviar evento de confirmação");
             return Task.CompletedTask;
         }
     }
